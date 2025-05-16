@@ -23,6 +23,7 @@ Dynamic min/max:
 ```yaml
 type: custom:battery-bar-card
 entity: sensor.battery_level
+mode: row
 min_entity: sensor.batttery_min
 max_entity: sensor.battery_max
 ```
@@ -30,6 +31,7 @@ Static min/max:
 ```yaml
 type: custom:battery-bar-card
 entity: sensor.battery_level
+mode:auto
 min_value: 20
 max_value: 80
 ```
