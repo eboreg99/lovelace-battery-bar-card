@@ -1,7 +1,7 @@
 {
   "name": "Battery Bar Card",
   "description": "A custom bar card for Home Assistant.",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "resources": [
     {
       "type": "module",
