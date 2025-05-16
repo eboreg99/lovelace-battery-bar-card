@@ -1,4 +1,6 @@
-# 🔋 Battery Bar Card for Home Assistant
+# Dynamic Progress Bar for Home Assistant
+
+## ⚠️ Not ready: You should not use this component yet.
 
 A customizable Lovelace card to display battery levels, supporting dynamic min/max values via entity or config.
 
@@ -17,11 +19,19 @@ A customizable Lovelace card to display battery levels, supporting dynamic min/m
 
 ## Example Usage
 
+Dynamic min/max:
 ```yaml
 type: custom:battery-bar-card
 entity: sensor.battery_level
-max_entity: sensor.battery_max     # or use fixed_max: 100
-min: 0
+min_entity: sensor.batttery_min
+max_entity: sensor.battery_max
+```
+Static min/max:
+```yaml
+type: custom:battery-bar-card
+entity: sensor.battery_level
+min_value: 20
+max_value: 80
 ```
 
 ## Features
