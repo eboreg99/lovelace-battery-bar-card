@@ -105,7 +105,7 @@ class BatteryBarCard extends HTMLElement {
           <div style="flex: 1; margin: 0 12px;" class="bar-container">
             <div class="bar"></div>
           </div>
-          <div>${Math.round(value)}%</div>
+          <div class="state">${Math.round(value)}%</div>
         </div>
       ` : `
         <ha-card header="${name}" title="${tooltip}">
