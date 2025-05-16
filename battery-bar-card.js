@@ -27,6 +27,7 @@ class BatteryBarCard extends HTMLElement {
 
     const entityId = this.config.entity;
     const stateObj = hass.states[entityId];
+    const icon = stateObj?.attributes.icon || 'mdi:help-circle';
     const rawValue = parseFloat(stateObj?.state || 0);
 
     // Minimum bestimmen
@@ -88,13 +89,19 @@ class BatteryBarCard extends HTMLElement {
       .card {
         padding: 16px;
       }
+      ha-icon {
+        margin-right: 8px;
+      }
     `;
 
     const template = `
       <style>${styles}</style>
       ${isRow ? `
         <div class="row">
-          <div title="${tooltip}">${name}</div>
+          <div title="${tooltip}" style="display: flex; align-items: center;">
+            <ha-icon icon="${icon}"></ha-icon>
+            <span>${name}</span>
+          </div>
           <div style="flex: 1; margin: 0 12px;" class="bar-container">
             <div class="bar"></div>
           </div>
@@ -103,6 +110,9 @@ class BatteryBarCard extends HTMLElement {
       ` : `
         <ha-card header="${name}" title="${tooltip}">
           <div class="card">
+            <div style="text-align: center;">
+              <ha-icon icon="${icon}"></ha-icon>
+            </div>
             <div class="bar-container">
               <div class="bar"></div>
             </div>
