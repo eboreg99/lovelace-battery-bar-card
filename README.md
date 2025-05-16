@@ -1,2 +1,4 @@
 # lovelace-battery-bar-card
-WIP. trying to learn.
+work in progress.
+trying to learn.
+you better not use this.
