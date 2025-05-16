@@ -58,7 +58,8 @@ class BatteryBarCard extends HTMLElement {
 
     // Name zusammensetzen
     const baseName = this.config.name || stateObj?.attributes.friendly_name || 'Unbekannt';
-    const name = `${baseName} (${min}–${max})`;
+    const name = baseName;
+    const tooltip = `Min: ${min} - Max: ${max}`;
 
     // Modus erkennen
     const isRow =
@@ -93,14 +94,14 @@ class BatteryBarCard extends HTMLElement {
       <style>${styles}</style>
       ${isRow ? `
         <div class="row">
-          <div>${name}</div>
+          <div title="${tooltip}">${name}</div>
           <div style="flex: 1; margin: 0 12px;" class="bar-container">
             <div class="bar"></div>
           </div>
           <div>${Math.round(value)}%</div>
         </div>
       ` : `
-        <ha-card header="${name}">
+        <ha-card header="${name}" title="${tooltip}">
           <div class="card">
             <div class="bar-container">
               <div class="bar"></div>
