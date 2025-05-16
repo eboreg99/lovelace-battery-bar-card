@@ -92,65 +92,20 @@ class BatteryBarCard extends HTMLElement {
       ha-icon {
         margin-right: 8px;
       }
-      .battery-row {
-        display: flex;
-        align-items: center;
-        padding: 0 16px;
-        min-height: var(--mdc-list-item-height, 48px);
-        font-size: var(--body-font-size, 14px);
-        color: var(--primary-text-color);
-      }
-      
-      .battery-info {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        min-width: 120px;
-        flex-shrink: 0;
-      }
-      
-      .battery-info ha-icon {
-        color: var(--state-icon-color);
-      }
-      
-      .battery-bar-container {
-        flex: 1;
-        margin: 0 12px;
-        height: 8px;
-        background: var(--divider-color);
-        border-radius: 4px;
-        position: relative;
-      }
-      
-      .bar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: ${value}%;
-        background-color: var(--primary-color);
-        border-radius: 4px;
-      }
-      
-      .battery-value {
-        min-width: 40px;
-        text-align: right;
-      }
-
     `;
 
     const template = `
       <style>${styles}</style>
       ${isRow ? `
-        <div class="battery-row" title="${tooltip}">
-          <div class="battery-info">
+        <div class="row">
+          <div title="${tooltip}" style="display: flex; align-items: center;">
             <ha-icon icon="${icon}"></ha-icon>
-            <span class="battery-name">${name}</span>
+            <span>${name}</span>
           </div>
-          <div class="battery-bar-container">
+          <div style="flex: 1; margin: 0 12px;" class="bar-container">
             <div class="bar"></div>
           </div>
-          <div class="battery-value">${Math.round(value)}%</div>
+          <div>${Math.round(value)}%</div>
         </div>
       ` : `
         <ha-card header="${name}" title="${tooltip}">
@@ -184,4 +139,3 @@ class BatteryBarCard extends HTMLElement {
 }
 
 customElements.define('battery-bar-card', BatteryBarCard);
-
