@@ -1,12 +1,12 @@
 {
   "name": "Battery Bar Card",
-  "description": "A custom bar card for Home Assistant.",
-  "version": "0.0.1",
+  "description": "A custom Lovelace card to display battery levels with dynamic max values.",
+  "version": "1.0.0",
+  "type": "lovelace",
   "resources": [
     {
       "type": "module",
-      "url": "https://github.com/eboreg99/lovelace-battery-bar-card/releases/latest/download/battery-bar-card.js"
+      "url": "https://github.com/eboreg99/battery-bar-card/releases/latest/download/battery-bar-card.js"
     }
-  ],
-  "type": "lovelace"
+  ]
 }
