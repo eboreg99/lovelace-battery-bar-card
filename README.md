@@ -2,9 +2,9 @@
 
 ## ⚠️ Not ready: You should not use this component yet.
 
-A customizable Lovelace card to display battery levels, supporting dynamic min/max values via entity or config.
+A customizable card or entity row to display a progress bar, supporting dynamic min/max values via entity or config.
 
-## Installation via HACS
+## ⚙️ Installation via HACS
 
 1. Add this repo as a custom repository in HACS:
    - URL: `https://github.com/eboreg99/battery-bar-card`
@@ -17,7 +17,7 @@ A customizable Lovelace card to display battery levels, supporting dynamic min/m
    type: module
    ```
 
-## Example Usage
+## ⚙️ Example Usage
 
 Dynamic min/max:
 ```yaml
@@ -31,12 +31,12 @@ Static min/max:
 ```yaml
 type: custom:battery-bar-card
 entity: sensor.battery_level
-mode:auto
+mode: auto
 min_value: 20
 max_value: 80
 ```
 
-## Features
+## ✅ Features
 
 - Works in both `card` and `entity-row` mode
 - Dynamic maximum from another entity

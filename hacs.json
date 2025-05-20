@@ -1,7 +1,7 @@
 {
   "name": "Battery Bar Card",
   "description": "A custom Lovelace card to display battery levels with dynamic max values.",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "type": "lovelace",
   "resources": [
     {
