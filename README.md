@@ -28,7 +28,7 @@ A customizable card or entity row to display a progress bar, supporting dynamic 
 
 ## ⚙️ Example Usage
 
-Dynamic min/max:
+Dynamic min/max entity row:
 ```yaml
 type: custom:battery-bar-card
 entity: sensor.battery_level
@@ -36,7 +36,7 @@ mode: row
 min_entity: sensor.batttery_min
 max_entity: sensor.battery_max
 ```
-Static min/max:
+Static min/max card:
 ```yaml
 type: custom:battery-bar-card
 entity: sensor.battery_level
