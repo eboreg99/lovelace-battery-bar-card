@@ -1,12 +1,7 @@
 {
   "name": "Battery Bar Card",
-  "description": "A custom Lovelace card to display battery levels with dynamic max values.",
+  "description": "A customizable card or entity row to display a progress bar, supporting dynamic min/max values via entity or config.",
   "version": "0.1.0",
   "type": "lovelace",
-  "resources": [
-    {
-      "type": "module",
-      "url": "https://github.com/eboreg99/battery-bar-card/releases/latest/download/battery-bar-card.js"
-    }
-  ]
+  "content_in_root": true
 }

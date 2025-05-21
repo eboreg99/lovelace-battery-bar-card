@@ -100,12 +100,13 @@ class BatteryBarCard extends HTMLElement {
         <div class="row">
           <div title="${tooltip}" style="display: flex; align-items: center;">
             <ha-icon icon="${icon}"></ha-icon>
+            <ha-state-icon .hass=${hass} .stateObj=${stateObj}></ha-state-icon>
             <span>${name}</span>
           </div>
           <div style="flex: 1; margin: 0 12px;" class="bar-container">
             <div class="bar"></div>
           </div>
-          <div class="state">${Math.round(rawValue)}%</div>
+          <div class="state">${Math.round(rawValue)}</div>
         </div>
       ` : `
         <ha-card header="${name}" title="${tooltip}">
@@ -116,7 +117,7 @@ class BatteryBarCard extends HTMLElement {
             <div class="bar-container">
               <div class="bar"></div>
             </div>
-            <p style="text-align: center; margin-top: 8px;">${Math.round(rawValue)}%</p>
+            <p style="text-align: center; margin-top: 8px;">${Math.round(rawValue)}</p>
           </div>
         </ha-card>
       `}
