@@ -9,6 +9,7 @@ A customizable card or entity row to display a progress bar, supporting dynamic 
 - [x] Works in both `card` and `entity-row` mode. Inline usage in entities card.
 - [x] Dynamic maximum from another entity
 - [x] Configurable fixed min/max
+- [ ] Label in percent or absolute
 - [ ] Fix CSS
 - [ ] Custom colors
 
